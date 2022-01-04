@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Walid Abu Al-Afia Portfolio Website</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+	
+	<!-- Font Awesome Kit -->
+	<script src="https://kit.fontawesome.com/a89403507a.js" crossorigin="anonymous"></script>
+
+	<!-- Anonymous Pro Google API Font -->
+	<!--
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+	-->
+
+	<!-- Source Code Font -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+	<link href="/Users/walidabualafia/personal-projects/portfolio-website/css/style.css" rel="stylesheet" />
+
+
+
+    </head>
+    <body>
+	<header>
+	    <div class="logo">
+		<img src="/Users/walidabualafia/personal-projects/portfolio-website/img/waldo-logo.png" alt="">
+	    </div>
+	    <button class="nav-toggle" aria-label="toggle navigation">
+		<span class="hamburger"></span>
+	    </button>
+	    <nav class="nav">
+		<ul class="nav__list">
+		    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+		    <li class="nav__item"><a href="#experiences" class="nav__link">My Experience</a></li>
+		    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+		    <li class="nav__item"><a href="#work" class="nav__link">My Projects</a></li>
+		</ul>
+	    </nav>
+	</header>
+
+	<!-- Intro -->
+	<section class="intro" id="home"> 
+	    <h1 class="section__title section__title--intro">
+		Hi, I am <strong>Walid Abu Al-Afia</strong>
+	    </h1>
+	    <p class="section__subtitle section__subtitle--intro">Software Engineer<p>
+	    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/waldo-headshot.jpg" alt="a picture of Walid Abu Al-Afia smiling" class="intro__img">
+	</section>
+
+
+	<!-- My Experiences -->
+	<section class="my-experiences" id="experiences">
+	    <h2 class="section__title section__title--experiences">What I Do</h2>
+	    <div class="experiences">
+
+		<div class="experience">
+		    <h3>Robotic Grasping Research Fellow</h3>
+		    <p>I recieved a fellowship from the National Science Foundation to join a project focused around the teachability of robotics. I designed an AR application and an accompanying set of user tasks to teach users about robot navigation using Laserscan. I conducted a user study investigating privacy in tele-presence robots/laser bots, and contributed to the research project that was presented in WeRobot 2021 (Miami - Remote).</p>
+		</div> <!-- /experience -->
+
+		<div class="experience">
+		    <h3>Computer Science Head Tutor</h3>
+		    <p>I serve as the Computer Science Head Tutor at Rhodes College. I hired and manage a team of 9 tutors by assigning them shifts, and facilitating the tutors' communication with the professors. I ensured fairness and facilitated data-collection/analysis by deploying a kiosk app for managing student queues.</p>
+		</div> <!-- /experience -->
+
+		<div class="experience">
+		    <h3>Cloud Application Student Administrator</h3>
+		    <p>I managed and maintained cloud-based applications running on Google Cloud Platform, including JupyterHub cluster on Kubernetes. I also integrated the cloud application with Rhodes' OneLogin single-sign-on (SSO).</p>
+		</div> <!-- /experience -->
+
+	    </div> <!-- /experiences -->
+
+	    <a href="/Users/walidabualafia/personal-projects/portfolio-website/resume/abualafia-resume.pdf" download="abualafia-resume.pdf" class="btn">My Resume</a>
+	</section>
+
+	<!-- About Me -->
+	<section class="about-me" id="about">
+	    <h2 class="section__title section__title--about">Who I am</h2>
+	    <p class="section__subtitle section__subtitle--about">Software Engineer based in Memphis</p>
+
+	    <div class="about-me__body">
+		<p>I am a Computer Science Junior at Rhodes College. I received the Jack U. Russell Award for Outsanding Work in Second-Year Computer Science. I am interested in a career in Software Engineering, and my passion lies in <strong>Distributed Systems</strong>. Despite that, I am extremely well-versed in and passionate about various other fields of Computer Science, like <em>Algorithms and Data Structures, Application Development, Artificial Intelligence, Augmented Reality and Virtual Environments, Computer Organization, Object Oriented Programming, Operating Systems, and Web Development</em>.</p>
+		<p>Throughout my five semesters at college, I have been consistently recognized on the Honor Roll and the Dean's List for my academic achievement. I am proficient in <em>Python, Java, GO, C, C#, HTML, CSS</em> and I am fluent in <em>NIOS II, Swift and Kotlin</em>.</p>
+	    </div>
+
+	    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/walid-graceland.jpeg" alt="waldo smiling in front of elvis records" class="about-me__img">
+	</section>
+
+	<!-- My Work -->
+	<section class="my-work" id="work">
+	    <h2 class="section__title section__title--work">My Work</h2>
+	    <p class="section__subtitle section__subtitle--work">A selection of projects from my GitHub page</p>
+
+	    <div class="portfolio">
+		<!-- Baccarat Threads -->
+		<a href="https://github.com/walidabualafia/baccarat-threads" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/baccarat-threads.png" alt="screenshot of baccarat threads lab from comp 330" class="portfolio__img">
+		</a>
+		<!-- Chat Polling -->
+		<a href="https://github.com/walidabualafia/chat-polling" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/chat-polling.png" alt="screenshot of chat polling lab from comp 330" class="portfolio__img">
+		</a>
+		<!-- MapReduce Lab -->
+		<a href="https://github.com/walidabualafia/mapreduce-lab" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/mapreduce-lab.png" alt="screenshot of map reduce lab from comp 385" class="portfolio__img">
+		</a>
+		<!-- Raft Lab-->
+		<a href="https://github.com/walidabualafia/raft-lab" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/raft-lab.png" alt="screenshot of raft lab from comp 385" class="portfolio__img">
+		</a>
+		<!-- Shell -->
+		<a href="https://github.com/walidabualafia/shell" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/shell.png" alt="screenshot of shell lab from comp 330" class="portfolio__img">
+		</a>
+		<!-- Sentiment Analysis -->
+		<a href="https://github.com/walidabualafia/sentiment-analysis" class="portfolio__item">
+		    <img src="/Users/walidabualafia/personal-projects/portfolio-website/img/sentiment-analysis.png" alt="screenshot of sentiment analysis lab from comp 241" class="portfolio__img">
+		</a>
+	    </div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+	    <a href="mailto:walid@lavabit.com" class="footer__link">walid@lavabit.com</a>
+	    <ul class="social-list">
+		<!-- Github -->
+		<li class="social-list__item">
+		    <a class="social-list__link" href="https://github.com/walidabualafia">
+	        	 <i class="fab fa-github"></i>
+		    </a>
+		</li>
+		<!-- LinkedIn -->
+		<li class="social-list__item">
+		    <a class="social-list__link" href="https://www.linkedin.com/in/abualafia/">
+			<i class="fab fa-linkedin"></i>
+		    </a>
+		</li>
+		<!-- Handshake -->
+		<li class="social-list__item">
+		    <a class="social-list__link" href="https://app.joinhandshake.com/users/20978298">
+			<i class="far fa-handshake"></i>
+		    </a>
+		</li>
+			
+	    </ul>
+	</footer>
+
+	<script src="js/index.js"></script>
+
+    </body>
+</html>
