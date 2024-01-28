@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css" />
+</head>
+
+<body>
+    <template id="greetings">
+         __   __  ___      __     ___       __    ________   
+        |"  |/  \|  "|    /""\   |"  |     |" \  |"      "\  
+        |'  /    \:  |   /    \  ||  |     ||  | (.  ___  :) 
+        |: /'        |  /' /\  \ |:  |     |:  | |: \   ) || 
+         \//  /\'    | //  __'  \ \  |___  |.  | (| (___\ || 
+         /   /  \\   |/   /  \\  ( \_|:  \ /\  |\|:       :) 
+        |___/    \___(___/    \___)_______|__\_|_|________/  
+                                                     
+
+        Welcome to my simple terminal. ^.^
+        type 'help' to see available commands.
+    </template>
+        <!--
+        .------..------..------..------..------.
+        |W.--. ||A.--. ||L.--. ||I.--. ||D.--. |
+        | :/\: || (\/) || :/\: || (\/) || :/\: |
+        | :\/: || :\/: || (__) || :\/: || (__) |
+        | '--'W|| '--'A|| '--'L|| '--'I|| '--'D|
+        `------'`------'`------'`------'`------'
+-->
+    <script>
+        $(function() {
+            $('body').terminal({
+                // HELLO command
+                hello: function(...args) {
+                    // Process all the command line args
+                    const options = $.terminal.parse_options(args);
+                    // Print help message
+                    if (options.help) {
+                        this.echo('Usage: hello [--help] <str>');
+                        this.echo('');
+                    } else {
+                        // Print the hello message with the input
+                        const input = args.join(' ');
+                        if (input.trim() !== '') {
+                            this.echo('Hello, ' + input +
+                                '. Welcome to this terminal.');
+                            this.echo('');
+                        }
+                    }
+                },
+                // CAT command
+                cat: function(...args) {
+                    const options = $.terminal.parse_options(args);
+                    if (options.width && options.height) {
+                        this.echo($('<img src="https://placekitten.com/' +
+                            options.width + '/' + options.height + '">'));
+                        this.echo('');
+                    } else {
+                        this.echo('Usage: cat [--width <int>] [--height <int>]');
+                        this.echo('');
+                    }
+                },
+                // TITLE command
+                title: function(...args) {
+                    const options = $.terminal.parse_options(args);
+                    return fetch(options.url || 'https://terminal.jcubic.pl')
+                        .then(r => r.text())
+                        .then(html => html.match(/<title>([^>]+)<\/title/)[1]);
+                },
+                // ABOUT command
+                about: function() {
+                    this.echo('Hi, I am Walid. I am a Computational Engineer.');
+                    this.echo('');
+                },
+                // PROJECTS command
+                projects: function() {
+                    const projectsList = [{
+                            name: 'walid.io',
+                            url: 'https://github.com/walidabualafia/walid.io',
+                            description: 'this website and its predecessor'
+                        },
+                        {
+                            name: 'shell',
+                            url: 'https://github.com/walidabualafia/shell',
+                            description: 'simple shell implemented in c lang'
+                        },
+                        {
+                            name: 'baccarat-threads',
+                            url: 'https://github.com/walidabualafia/baccarat-threads',
+                            description: 'simple bacarrat simulation accross HPC system'
+                        },
+                        {
+                            name: 'dotfiles',
+                            url: 'https://github.com/walidabualafia/dotfiles',
+                            description: 'some of the dotfiles i found along my way'
+                        },
+                    ];
+
+                    if (projectsList.length > 0) {
+                        this.echo('');
+                        this.echo('Some of my selected GitHub projects: ');
+                        projectsList.forEach((project) => {
+                            this.echo(` > [${project.name}]: (${project.url})`);
+                            this.echo(`   ${project.description}`);
+                            this.echo('');
+                        });
+                    } else {
+                        this.echo('No projects available.');
+                        this.echo('');
+                    }
+                },
+                // HELP command
+                help: function() {
+                    this.echo('Available commands:');
+                    this.echo(' > about    : this command displays some information about me.');
+                    this.echo(' > help     : show this list of commands.');
+                    this.echo(' > clear    : clears the terminal.');
+                    this.echo(' > cat      : display a cat picture.');
+                    this.echo(' > projects : print some GitHub projects.');
+                    this.echo('');
+                }
+            }, {
+                checkArity: false,
+                completion: true,
+                greetings: greetings.innerHTML
+            });
+        });
+    </script>
+</body>
+
+</html>
