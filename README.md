@@ -116,4 +116,4 @@ To deploy your own version:
 
 ---
 
-*Built with ❤️ and ☕ | HPC Engineer @ St. Jude | MSCS Student @ UT Austin*
+*Built with ❤️ and ☕ | HPC Engineer | MSCS Student*
