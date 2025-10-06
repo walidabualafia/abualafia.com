@@ -1,560 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Walid</title>
-    <meta content="Computational Engineer - HPC Software Engineer" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.ico" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Nov 17 2023 with Bootstrap v5.3.
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-    <style>
-        .zoomed-iframe {
-            transform: scale(1.5);
-            /* Adjust the scale factor as needed */
-            transform-origin: top left;
-            /* Set the transform origin */
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>walid | portfolio</title>
+    <meta name="description" content="walid abu al-afia - hpc computational engineer & mscs student">
+    <link rel="icon" href="legacy/v2/assets/img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- ======= Mobile nav toggle button ======= -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="d-flex flex-column">
-
-            <div class="profile">
-                <img src="assets/img/walid-headshot.jpg" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Walid Abu Al-Afia</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://github.com/walidabualafia" class="github"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/abualafia/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                </div>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
             </div>
-
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-                    <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-terminal"></i> <span>Terminal</span></a></li>
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-                </ul>
-            </nav><!-- .nav-menu -->
+            <div class="terminal-title">
+                <span class="title-user">walid</span><span class="title-at">@</span><span class="title-host">portfolio</span><span class="title-separator">:</span><span class="title-path">~</span><span class="title-prompt">$</span>
+            </div>
+            <button class="mode-toggle" id="xp-toggle" title="toggle windows xp mode">
+                <span class="mode-icon">🪟</span>
+            </button>
+            <button class="mode-toggle" id="retro-toggle" title="toggle retro mode">
+                <span class="mode-icon">🖥️</span>
+            </button>
+            <button class="mode-toggle" id="mode-toggle" title="toggle funky mode">
+                <span class="mode-icon">✨</span>
+            </button>
         </div>
-    </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Walid Abu Al-Afia</h1>
-            <p>I'm a <span class="typed" data-typed-items="Computational Engineer, Parallel Programmer, HPC Engineer, Code Enthusiast"></span></p>
+        <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output">
+                <div class="welcome-message">
+                    <pre class="ascii-art">
+                 _ _     _
+                | (_)   | |
+ __      ____ _ | |_  __| |
+ \ \ /\ / / _` || | |/ _` |
+  \ V  V / (_| || | | (_| |
+   \_/\_/ \__,_||_|_|\__,_|
+
+    </pre>
+                    <p>welcome to my portfolio terminal!</p>
+                    <p>computational engineer ii @ st. jude | mscs student @ ut austin</p>
+                    <br>
+                    <p>type <span class="command-hint">help</span> to see available commands</p>
+                    <p>or try the quick access buttons below ↓</p>
+                </div>
+            </div>
+
+            <div class="quick-commands">
+                <button class="quick-btn" onclick="executeQuickCommand('about')">about</button>
+                <button class="quick-btn" onclick="executeQuickCommand('experience')">experience</button>
+                <button class="quick-btn" onclick="executeQuickCommand('skills')">skills</button>
+                <button class="quick-btn" onclick="executeQuickCommand('education')">education</button>
+                <button class="quick-btn" onclick="executeQuickCommand('contact')">contact</button>
+            </div>
+
+            <div class="input-line">
+                <span class="prompt">visitor@walid:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autofocus spellcheck="false">
+            </div>
         </div>
-    </section><!-- End Hero -->
+    </div>
 
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                    <p>
-                        I am a Bachelor of Science in Computer Science. Hailing
-                        from Amman, Jordan, I graduated from Rhodes College in May 2023,
-                        and I have dedicated my knowledge to the betterment of
-                        High-Performance Computing systems ever since.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img src="assets/img/walid-headshot.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>HPC &amp; Computational Engineer.</h3>
-                        <p class="fst-italic">
-                            My love for HPC and Systems Programming began at an
-                            early stage in my career. Ever since I took
-                            Operating Systems, I knew exactly where I wanted to
-                            invest my time in computing. If you're an early career
-                            professional and are interested in getting into HPC, please feel free
-                            to contact me at any of the means below.
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 Feb 2001</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.abualafia.com</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+901 921 4305</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Memphis, TN</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>walid@lavabit.com</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Favorite Language:</strong> <span>C/C++</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p>
-                            I am seeking research-oriented opportunities that
-                            study compilers. My research interests lie in
-                            performance-efficient parallel compilers. Although
-                            we are at an advanced stage of computing, we often
-                            notice how compilation time is a persistent
-                            bottleneck. Why compilers take a long time to
-                            compile is a problem that interests me, and I want
-                            to make compilers faster. <strong>If you know of PhD
-                                programs studying compilers/compiler design, please
-                                forward me the opprtunity.</strong>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Facts Section ======= -->
-        <section id="facts" class="facts">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>TL;DR</h2>
-                    <p>
-                        A quick checksum about the important things one
-                        would need to know about me:
-                    </p>
-                </div>
-
-                <div class="row no-gutters">
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                        <div class="count-box">
-                            <i class="bi bi-translate"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Multilingual</strong> Arabic, English fluently. Spanish, French limited working proficiency</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="count-box">
-                            <i class="bi bi-window-stack"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Long-term Programmer</strong> programmed daily for 6+ years</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="count-box">
-                            <i class="bi bi-headset"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Years of Experience</strong> professionally working/interning</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="count-box">
-                            <i class="bi bi-backpack2"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Programming Languages</strong> proficient in more than 12 programming languages</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Facts Section -->
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Skills</h2>
-                    <p>
-                        Given the nature of my work, I am scripting in Bash and
-                        Python for the better part of my day. I spend the rest
-                        of the day compiling C/C++/R applications on our systems.
-                        I also manage the centralized installations of each of
-                        these programming languages, giving me both a
-                        user/administrator understanding.
-                    </p>
-                </div>
-
-                <div class="row skills-content">
-
-                    <div class="col-lg-6" data-aos="fade-up">
-
-                        <div class="progress">
-                            <span class="skill">Python <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Bash <i class="val">95%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">C/C++ <i class="val">95%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="progress">
-                            <span class="skill">R <i class="val">85%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Java <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">GO <i class="val">65%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Skills Section -->
-
-        <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Resume</h2>
-                    <p>
-                        You can find my resume in an easy-to-read webpage form below. A
-                        downloadable PDF version will be added to the website by
-                        February.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Summary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Walid Abu Al-Afia</h4>
-                            <p><em>
-                                    Innovative and deadline-driven Computational
-                                    Engineer with 2+ years of experience developing
-                                    and compiling state-of-the-art parallel programs
-                                    for Healthcare HPC applications.
-                                </em></p>
-                            <ul>
-                                <li>1350 Concourse Ave, Memphis TN</li>
-                                <li>(901) 921-4305</li>
-                                <li>walid@lavabit.com</li>
-                            </ul>
-                        </div>
-
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Bachelor of Science - Computer Science</h4>
-                            <h5>2019 - 2023</h5>
-                            <p><em>Rhodes College, Memphis, TN</em></p>
-                            <p>
-                                Magna Cum Laude, Joseph Reeves Hyde Award
-                                recipient. Inducted to honor societies: Upsilon Pi Epsilon,
-                                Theta Kappa Alpha, ACM/IEEE.
-                            </p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>High School Diploma</h4>
-                            <h5>2015 - 2019</h5>
-                            <p><em>King's Academy, Manja-Madaba, JOR</em></p>
-                            <p>
-                                Graduated with highest honors. Co-president of the
-                                Student Leadership Council, Head Organizer of
-                                KA-Model United Nations. Completed 10 AP courses
-                                &amp; exams.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>Computational Engineer I</h4>
-                            <h5>2023 - Present</h5>
-                            <p><em>St. Jude Children's Research Hospital, Memphis, TN</em></p>
-                            <ul>
-                                <li>Fully implemented and maintains Open OnDemand instance for St. Jude HPC.</li>
-                                <li>Handles all software/module installs on the cluster (RHEL7/RHEL8)</li>
-                                <li>Organizes and teaches seminars on HPC programming tools (Conda, containerization...)</li>
-                                <li>Optimizes/debugs parallel programs and helps researchers write scalable software</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>HPC Engineer - Student</h4>
-                            <h5>2022 - 2023</h5>
-                            <p><em>St. Jude Children's Research Hospital, Memphis, TN</em></p>
-                            <ul>
-                                <li>Built a metrics collection development environment utilizing a prometheus data source</li>
-                                <li>Used Grafana dashboards to visualize metrics</li>
-                                <li>Built and deployed a REST API endpoint running a renowned protein-protein complex structure prediction algorithm</li>
-                                <li>Compiled documentation and knowledge base articles for other engineers on how to deploy endpoints to St. Jude’s in-house HPC clusters</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Resume Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>
-                        This section highlights my public GitHub projects that I have built
-                        over the years. Other projects, including an implementation
-                        of the Raft Algorithm and the MapReduce Algorithm on a
-                        per-request basis.
-                    </p>
-                </div>
-
-                <!-- This is the projects view section -->
-                <iframe src="projects/index.html" width="100%" height="2100"></iframe>
-
-            </div>
-        </section><!-- End Portfolio Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p>
-                        Although most of my programming efforts are now dedicated
-                        towards my job, I spend some time on the side developing
-                        some of my interests.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                        <h4 class="title"><a href="">Project Development</a></h4>
-                        <p class="description">
-                            I enjoy full-stack programming. If you have any porject
-                            ideas that you would like to build and need a developer,
-                            please feel free to contact me.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><i class="bi bi-terminal"></i></div>
-                        <h4 class="title"><a href="">Linux Environment Customization</a></h4>
-                        <p class="description">
-                            One of my main hobbies is maintaining a repo with
-                            various custom configurations (sh, tmux, vim...). If you are
-                            interested in a custom solution, please feel free to
-                            reach out.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><i class="bi bi-briefcase"></i></div>
-                        <h4 class="title"><a href="">Helping Students Break into Tech</a></h4>
-                        <p class="description">
-                            I am passionate about helping talented students break into tech.
-                            If you're a recent graduate, I'm happy to run mock
-                            interviews/review application your materials.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Services Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Terminal</h2>
-                    <p>
-                    This is a simple terminal that allows you to get my info interactively.
-                    </p>
-                </div>
-
-                <!-- This is the jQuery terminal -->
-                <iframe class="zoomed-iframe" src="shell/index.html" width="65%" height="650"></iframe>
-
-            </div>
-        </section><!-- End Testimonials Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>
-                    You can contact me by any of the means listed below. If you'd like a faster response, please message me on LinkedIn. Links to my LinkedIn and GitHub pages are in the sidebar.
-                    </p>
-                </div>
-
-                <div class="row" data-aos="fade-in">
-
-                    <div class="col-lg-15 d-flex align-items-stretch">
-                        <div class="info">
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Location:</h4>
-                                <p>1350 Concourse Ave, Memphis, TN 38104</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>walid@lavabit.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 (901) 921-4305</p>
-                            </div>
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.1793478118634!2d-90.01816912369334!3d35.15214765885574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d57e3e8e3475ab%3A0xcb4ad09efd3b89a1!2sCrosstown%20Concourse%2C%201350%20Concourse%20Ave%2C%20Memphis%2C%20TN%2038104!5e0!3m2!1sen!2sus!4v1706481848326!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-                        </div>
-
-                    </div>
-
-                    <!--
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-                    </div>
-                    -->
-
-                </div>
-
-            </div>
-        </section><!-- End Contact Section -->
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-          <!--
-            <div class="copyright">
-                &copy; Copyright <strong><span>iPortfolio</span></strong>
-            </div>
-            <div class="credits">
-          -->
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-          <!--
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          -->
-        </div>
-    </footer><!-- End  Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
