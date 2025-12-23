@@ -33,7 +33,7 @@ or try the konami code (↑↑↓↓←→←→ba) 🎮`
     output : `<span class="success-text">$ whoami</span>
 
 computational engineer ii @ st. jude children's research hospital
-mscs student @ university of texas at austin (starting aug 2025)
+m.s. computer science @ university of texas at austin (aug 2025 - may 2027)
 
 from amman, jordan | based in memphis, tn
 b.s. computer science - rhodes college (2023)
@@ -134,7 +134,7 @@ my public github projects showcase work in:
     description : 'contact information',
     output : `<span class="success-text">$ cat contact.vcf</span>
 
-<span class="info-text">email:</span>     <a href="mailto:walid@lavabit.com">walid@lavabit.com</a>
+<span class="info-text">email:</span>     <a href="mailto:walid@utexas.edu">walid@utexas.edu</a>
 <span class="info-text">github:</span>    <a href="https://github.com/walidabualafia" target="_blank">github.com/walidabualafia</a>
 <span class="info-text">linkedin:</span>  <a href="https://www.linkedin.com/in/abualafia" target="_blank">linkedin.com/in/abualafia</a>
 
@@ -147,7 +147,7 @@ my public github projects showcase work in:
 
 please contact me via email or linkedin for resume/cv
 
-  email: <a href="mailto:walid@lavabit.com">walid@lavabit.com</a>
+  email: <a href="mailto:walid@utexas.edu">walid@utexas.edu</a>
   linkedin: <a href="https://www.linkedin.com/in/abualafia" target="_blank">linkedin.com/in/abualafia</a>`
   },
 
