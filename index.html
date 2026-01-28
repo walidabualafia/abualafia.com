@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walid Abu Al-Afia | HPC Computational Engineer & MSCS Student</title>
-    <meta name="description" content="Walid Abu Al-Afia - Computational Engineer II at St. Jude Children's Research Hospital and Master's student in Computer Science at UT Austin. Specializing in high-performance computing and computational engineering.">
-    <meta name="keywords" content="Walid Abu Al-Afia, computational engineer, HPC, high performance computing, St. Jude, UT Austin, computer science">
+    <title>Walid Abu Al-Afia | Computational Engineer & Researcher</title>
+    <meta name="description" content="Walid Abu Al-Afia - Computational Engineer II at St. Jude Children's Research Hospital and Master's student in Computer Science at UT Austin. Specializing in high-performance computing, MLOps, and AI infrastructure.">
+    <meta name="keywords" content="Walid Abu Al-Afia, computational engineer, HPC, high performance computing, St. Jude, UT Austin, computer science, MLOps, AI infrastructure">
     <meta name="author" content="Walid Abu Al-Afia">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://abualafia.com/">
-    <meta property="og:title" content="Walid Abu Al-Afia | HPC Computational Engineer & MSCS Student">
+    <meta property="og:title" content="Walid Abu Al-Afia | Computational Engineer & Researcher">
     <meta property="og:description" content="Computational Engineer II at St. Jude Children's Research Hospital and Master's student in Computer Science at UT Austin.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://abualafia.com/">
-    <meta property="twitter:title" content="Walid Abu Al-Afia | HPC Computational Engineer & MSCS Student">
+    <meta property="twitter:title" content="Walid Abu Al-Afia | Computational Engineer & Researcher">
     <meta property="twitter:description" content="Computational Engineer II at St. Jude Children's Research Hospital and Master's student in Computer Science at UT Austin.">
 
-    <link rel="icon" href="legacy/v2/assets/img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+    <link rel="apple-touch-icon" href="favicon.svg?v=2">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -35,70 +39,671 @@
         "@type": "Organization",
         "name": "St. Jude Children's Research Hospital"
       },
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "University of Texas at Austin"
-      },
-      "description": "HPC Computational Engineer and MSCS student specializing in high-performance computing"
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "University of Texas at Austin"
+        },
+        {
+          "@type": "Organization",
+          "name": "Rhodes College"
+        }
+      ],
+      "description": "Computational Engineer specializing in HPC, MLOps, and AI Infrastructure"
     }
     </script>
 </head>
 <body>
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn close"></span>
-                <span class="btn minimize"></span>
-                <span class="btn maximize"></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">walid</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#research">Research</a>
+                <a href="#skills">Skills</a>
+                <a href="#vibe">Vibe Coding</a>
+                <a href="#contact" class="nav-cta">Contact</a>
             </div>
-            <div class="terminal-title">
-                <span class="title-user">walid</span><span class="title-at">@</span><span class="title-host">portfolio</span><span class="title-separator">:</span><span class="title-path">~</span><span class="title-prompt">$</span>
-            </div>
-            <button class="mode-toggle" id="xp-toggle" title="toggle windows xp mode">
-                <span class="mode-icon">🪟</span>
-            </button>
-            <button class="mode-toggle" id="retro-toggle" title="toggle retro mode">
-                <span class="mode-icon">🖥️</span>
-            </button>
-            <button class="mode-toggle" id="mode-toggle" title="toggle funky mode">
-                <span class="mode-icon">✨</span>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
+    </nav>
 
-        <div class="terminal-body" id="terminal-body">
-            <div class="terminal-output" id="terminal-output">
-                <div class="welcome-message">
-                    <pre class="ascii-art">
-                 _ _     _
-                | (_)   | |
- __      ____ _ | |_  __| |
- \ \ /\ / / _` || | |/ _` |
-  \ V  V / (_| || | | (_| |
-   \_/\_/ \__,_||_|_|\__,_|
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#skills">Skills</a>
+        <a href="#vibe">Vibe Coding</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-    </pre>
-                    <p>welcome to my portfolio terminal!</p>
-                    <p>computational engineer ii @ st. jude | mscs student @ ut austin</p>
-                    <br>
-                    <p>type <span class="command-hint">help</span> to see available commands</p>
-                    <p>or try the quick access buttons below ↓</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Computational Engineer II @ St. Jude</div>
+            <h1 class="hero-title">
+                Building infrastructure<br>
+                for <span class="highlight">scientific discovery</span>
+            </h1>
+            <p class="hero-subtitle">
+                I architect high-performance computing systems, MLOps pipelines, and AI infrastructure 
+                that empower researchers to push the boundaries of what's possible in pediatric cancer research.
+            </p>
+            <div class="hero-actions">
+                <a href="#experience" class="btn btn-primary">View My Work</a>
+                <a href="abualafia-curriculum-vitae.pdf" download class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Memphis, TN</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Education</span>
+                    <span class="meta-value">MS CS @ UT Austin</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Origin</span>
+                    <span class="meta-value">Amman, Jordan</span>
                 </div>
             </div>
+        </div>
+        <div class="hero-visual">
+            <div class="mars-terrain"></div>
+            <div class="grid-overlay"></div>
+        </div>
+    </section>
 
-            <div class="quick-commands">
-                <button class="quick-btn" onclick="executeQuickCommand('about')">about</button>
-                <button class="quick-btn" onclick="executeQuickCommand('experience')">experience</button>
-                <button class="quick-btn" onclick="executeQuickCommand('skills')">skills</button>
-                <button class="quick-btn" onclick="executeQuickCommand('education')">education</button>
-                <button class="quick-btn" onclick="executeQuickCommand('contact')">contact</button>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About Me</h2>
             </div>
+            <div class="about-grid">
+                <div class="about-profile">
+                    <div class="profile-image-container">
+                        <img src="profile.png" alt="Walid Abu Al-Afia" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">
+                        I'm a computational engineer passionate about building systems that accelerate 
+                        scientific research. Currently at St. Jude Children's Research Hospital, 
+                        I lead HPC infrastructure initiatives and serve as the institutional resource 
+                        for AI Agents across all HPC clusters.
+                    </p>
+                    <p>
+                        My work spans from designing large-scale monitoring infrastructure with Prometheus 
+                        and Grafana to architecting MLOps-focused Python packages that enable researchers 
+                        to train machine learning models in a low-code fashion. I've expanded our Open OnDemand 
+                        instance from a single cluster to a multi-cluster deployment spanning four environments.
+                    </p>
+                    <p>
+                        Originally from Jordan, I graduated magna cum laude from Rhodes College and am 
+                        currently pursuing my Master's in Computer Science at UT Austin, focusing on 
+                        parallel systems and deep learning.
+                    </p>
+                    <div class="about-languages">
+                        <span class="lang-tag">English (Native)</span>
+                        <span class="lang-tag">Arabic (Native)</span>
+                        <span class="lang-tag">French</span>
+                        <span class="lang-tag">Spanish</span>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">20,000+</span>
+                        <span class="stat-label">Core HPC Cluster</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Cluster Environments</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">19</span>
+                        <span class="stat-label">CryoSPARC Instances</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">30 PB</span>
+                        <span class="stat-label">Data Migrated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="input-line">
-                <span class="prompt">visitor@walid:~$</span>
-                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autofocus spellcheck="false">
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            
+            <div class="experience-timeline">
+                <!-- Current Role -->
+                <div class="experience-card featured">
+                    <div class="exp-header">
+                        <div class="exp-meta">
+                            <span class="exp-date">May 2024 - Present</span>
+                            <span class="exp-type">Current</span>
+                        </div>
+                        <h3 class="exp-title">Computational Engineer II</h3>
+                        <p class="exp-company">St. Jude Children's Research Hospital</p>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-highlights">
+                            <div class="highlight-item">
+                                <h4>AI Infrastructure Leadership</h4>
+                                <p>Piloted the secure adoption of AI Agents across all St. Jude HPC clusters. Conduct seminars teaching researchers how to effectively integrate Cursor, Claude Code, Codex, and other AI coding tools into their research workflows.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>MLOps Development</h4>
+                                <p>Architected a 20,000-line MLOps-focused Python package enabling researchers to quickly train ML models in a low-code/no-code fashion with comprehensive Jupyter notebooks.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>Multi-Cluster Architecture</h4>
+                                <p>Expanded Open OnDemand from single to multi-cluster deployment spanning Slurm HPC, SCCE/GDPR, colocation, and main HPC clusters across both LSF and Slurm workload managers.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>Structural Biology Support</h4>
+                                <p>Sole resource for 19 CryoSPARC instances. Built On-The-Fly processing pipeline and conducted 4-month, 30 PB data migration to dedicated Imaging Storage system.</p>
+                            </div>
+                        </div>
+                        <div class="exp-tags">
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>Slurm</span>
+                            <span>LSF</span>
+                            <span>MLOps</span>
+                            <span>AI Agents</span>
+                            <span>CryoSPARC</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Roles -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-meta">
+                            <span class="exp-date">May 2023 - May 2024</span>
+                        </div>
+                        <h3 class="exp-title">Computational Engineer I</h3>
+                        <p class="exp-company">St. Jude Children's Research Hospital</p>
+                    </div>
+                    <div class="exp-content">
+                        <p>Built and deployed Open OnDemand instance serving 20,000+ core cluster. Authored multiple Interactive Applications (Maestro, VMD, Scipion). Managed all software and module installations across RHEL7/RHEL8 environments. Taught seminars on HPC programming tools.</p>
+                        <div class="exp-tags">
+                            <span>Open OnDemand</span>
+                            <span>MPI</span>
+                            <span>OpenMP</span>
+                            <span>CUDA</span>
+                            <span>Containerization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-meta">
+                            <span class="exp-date">Sep 2022 - May 2023</span>
+                        </div>
+                        <h3 class="exp-title">HPC Engineering Student</h3>
+                        <p class="exp-company">St. Jude Children's Research Hospital</p>
+                    </div>
+                    <div class="exp-content">
+                        <p>Built metrics collection environment with Prometheus and Grafana. Designed cluster monitoring dashboards. Performed routine module installations on RHEL7 HPC Cluster.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-meta">
+                            <span class="exp-date">Jun 2022 - Aug 2022</span>
+                        </div>
+                        <h3 class="exp-title">HPC Research Computing Intern</h3>
+                        <p class="exp-company">St. Jude Children's Research Hospital</p>
+                    </div>
+                    <div class="exp-content">
+                        <p>Developed VR application using Unity and Meta SDK for pediatric patient training. Built REST API endpoint for AlphaFold-based protein structure prediction. Created deployment documentation for HPC engineering team.</p>
+                        <div class="exp-tags">
+                            <span>Unity</span>
+                            <span>VR</span>
+                            <span>REST API</span>
+                            <span>AlphaFold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Role -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-meta">
+                            <span class="exp-date">May 2023 - Present</span>
+                            <span class="exp-type">Concurrent</span>
+                        </div>
+                        <h3 class="exp-title">IS Internship Coordinator</h3>
+                        <p class="exp-company">St. Jude Children's Research Hospital</p>
+                    </div>
+                    <div class="exp-content">
+                        <p>Manage the internship program reviewing 300-500 applications yearly. Conduct interviews and coordinate hiring of 15 interns annually. Established intern-to-full-time pipeline creating career tracks for permanent positions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section research-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Publications</span>
+                <h2 class="section-title">Research</h2>
+            </div>
+            
+            <div class="research-card">
+                <div class="research-venue">IEEE/RSJ IROS 2023</div>
+                <h3 class="research-title">Development and Evaluation of Exploratory Experiences to Facilitate Reasoning About Robotic Systems</h3>
+                <p class="research-authors">S. Balali, M. Hudspeth, I. Afflerbach, H. Helgesen, J. McCurry, <strong>W. Abu Al-Afia</strong> et al.</p>
+                <p class="research-abstract">
+                    This paper introduces a novel interactive approach—Exploratory Experiences—that aims to improve 
+                    the ability of people to reason about the capabilities and limitations of robotic technology. 
+                    We focus on robot navigation and object detection, evaluating with a novel approach that measures 
+                    participants' ability to predict robot failures.
+                </p>
+                <div class="research-keywords">
+                    <span>Human-Robot Interaction</span>
+                    <span>Navigation</span>
+                    <span>Object Detection</span>
+                    <span>Explainable AI</span>
+                </div>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10342409" target="_blank" class="research-link">
+                    Read Paper <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-date">Aug 2025 - Dec 2028</span>
+                        <h3 class="edu-degree">Master of Science, Computer Science</h3>
+                        <p class="edu-school">The University of Texas at Austin</p>
+                        <p class="edu-details">GPA: 4.0 | Focus: Parallel Systems, Deep Learning</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-date">2019 - May 2023</span>
+                        <h3 class="edu-degree">Bachelor of Science, Computer Science</h3>
+                        <p class="edu-school">Rhodes College</p>
+                        <p class="edu-details">GPA: 3.87 | Magna Cum Laude</p>
+                        <div class="edu-honors">
+                            <span>Upsilon Pi Epsilon</span>
+                            <span>Theta Alpha Kappa</span>
+                            <span>Joseph Reeves Hyde Award</span>
+                            <span>Dean's List</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card certification">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-date">2024</span>
+                        <h3 class="edu-degree">NVIDIA Certified Associate</h3>
+                        <p class="edu-school">AI Infrastructure and Operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <span>Python</span>
+                        <span>C/C++</span>
+                        <span>Rust</span>
+                        <span>Go</span>
+                        <span>Java</span>
+                        <span>R</span>
+                        <span>Ruby</span>
+                        <span>Bash</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>React.js</span>
+                        <span>Racket</span>
+                        <span>C#</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">HPC & Parallel Computing</h3>
+                    <div class="skill-items">
+                        <span>Slurm</span>
+                        <span>LSF</span>
+                        <span>Open OnDemand</span>
+                        <span>MPI</span>
+                        <span>OpenMP</span>
+                        <span>CUDA</span>
+                        <span>GPU Optimization</span>
+                        <span>SPMD Programming</span>
+                        <span>Data Distribution</span>
+                        <span>Environment Modules</span>
+                        <span>RHEL 7/8</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">DevOps & Cloud</h3>
+                    <div class="skill-items">
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>Apptainer</span>
+                        <span>Singularity</span>
+                        <span>Google Cloud Platform</span>
+                        <span>Conda</span>
+                        <span>VNC</span>
+                        <span>SSO/OneLogin</span>
+                        <span>Shell Scripting</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">ML, AI & Scientific Computing</h3>
+                    <div class="skill-items">
+                        <span>Transformers</span>
+                        <span>CNNs</span>
+                        <span>LSTMs</span>
+                        <span>Federated Learning</span>
+                        <span>Contrastive Learning</span>
+                        <span>Ensemble Methods</span>
+                        <span>MLOps</span>
+                        <span>Deep Learning</span>
+                        <span>AI Agents</span>
+                        <span>Jupyter</span>
+                        <span>AlphaFold</span>
+                        <span>CryoSPARC</span>
+                        <span>Cryo-EM/ET</span>
+                        <span>Data Pipelines</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">Tools & Editors</h3>
+                    <div class="skill-items">
+                        <span>Vim</span>
+                        <span>Emacs</span>
+                        <span>VSCode</span>
+                        <span>Cursor</span>
+                        <span>IntelliJ Suite</span>
+                        <span>RStudio</span>
+                        <span>Unity</span>
+                        <span>Git</span>
+                        <span>GCC/GNU</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">Focus Areas</h3>
+                    <div class="skill-items">
+                        <span>Parallel Systems</span>
+                        <span>Distributed Systems</span>
+                        <span>Compiler Design</span>
+                        <span>Systems Programming</span>
+                        <span>Scientific Computing</span>
+                        <span>Software Engineering</span>
+                        <span>Human-Robot Interaction</span>
+                        <span>VR/AR Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vibe Coding Section -->
+    <section id="vibe" class="section vibe-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Philosophy</span>
+                <h2 class="section-title">Vibe Coding</h2>
+            </div>
+            
+            <div class="vibe-content">
+                <div class="vibe-intro">
+                    <p class="vibe-lead">
+                        I'm a vibe coder at heart—a huge proponent of using AI to ship software 
+                        faster and better. The future of software engineering isn't about replacing 
+                        developers; it's about amplifying what we can build.
+                    </p>
+                </div>
+                
+                <div class="vibe-grid">
+                    <div class="vibe-card">
+                        <h3>How I Use AI</h3>
+                        <ul class="vibe-list">
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Rapid prototyping and proof-of-concepts</span>
+                            </li>
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Generating boilerplate and scaffolding</span>
+                            </li>
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Refactoring and modernizing codebases</span>
+                            </li>
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Optimizing efficiency and performance</span>
+                            </li>
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Studying and analyzing runtime behavior</span>
+                            </li>
+                            <li>
+                                <span class="vibe-icon">→</span>
+                                <span>Documentation and code organization</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vibe-card">
+                        <h3>My Daily Stack</h3>
+                        <div class="vibe-tools">
+                            <span class="tool-tag">Cursor</span>
+                            <span class="tool-tag">Kiro</span>
+                            <span class="tool-tag">Kilo</span>
+                            <span class="tool-tag">Kimi</span>
+                            <span class="tool-tag">Qwen</span>
+                            <span class="tool-tag">Amp</span>
+                            <span class="tool-tag">Augment</span>
+                            <span class="tool-tag">Antigravity</span>
+                            <span class="tool-tag">OpenCode</span>
+                            <span class="tool-tag">Moltbot</span>
+                            <span class="tool-tag">Emergent</span>
+                            <span class="tool-tag">Resonant</span>
+                            <span class="tool-tag">Warp</span>
+                            <span class="tool-tag">Trae</span>
+                        </div>
+                        <p class="vibe-note">Plus many other tools in rotation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                <p class="contact-text">
+                    Whether you're interested in collaboration, have questions about HPC infrastructure, 
+                    or just want to connect—I'd love to hear from you.
+                </p>
+                <div class="contact-links">
+                    <a href="abualafia-curriculum-vitae.pdf" download class="contact-link cv-download">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="12" y1="18" x2="12" y2="12"/>
+                                <polyline points="9 15 12 18 15 15"/>
+                            </svg>
+                        </span>
+                        <span class="contact-label">Resume</span>
+                        <span class="contact-value">Download CV (PDF)</span>
+                    </a>
+                    <a href="mailto:walid@utexas.edu" class="contact-link">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </span>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">walid@utexas.edu</span>
+                    </a>
+                    <a href="https://github.com/walidabualafia" target="_blank" class="contact-link">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </span>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">walidabualafia</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abualafia" target="_blank" class="contact-link">
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </span>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">in/abualafia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Toggle -->
+    <button class="terminal-toggle" id="terminal-toggle" aria-label="Open terminal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="4 17 10 11 4 5"/>
+            <line x1="12" y1="19" x2="20" y2="19"/>
+        </svg>
+    </button>
+
+    <!-- Terminal Modal -->
+    <div class="terminal-modal" id="terminal-modal">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn close" id="terminal-close"></span>
+                    <span class="btn minimize"></span>
+                    <span class="btn maximize"></span>
+                </div>
+                <div class="terminal-title">
+                    <span class="title-user">walid</span><span class="title-at">@</span><span class="title-host">mars</span><span class="title-separator">:</span><span class="title-path">~</span><span class="title-prompt">$</span>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-output" id="terminal-output">
+                    <div class="welcome-message">
+                        <pre class="ascii-art">
+ __      __         _   _       _ 
+ \ \    / /  __ _  | | (_)   __| |
+  \ \/\/ /  / _` | | | | |  / _` |
+   \_/\_/   \__,_| |_| |_|  \__,_|
+                                  </pre>
+                        <p class="terminal-welcome">welcome to the terminal interface</p>
+                        <p>type <span class="command-hint">help</span> for available commands</p>
+                    </div>
+                </div>
+                <div class="input-line">
+                    <span class="prompt">visitor@walid:~$</span>
+                    <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false">
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Designed & built with care from the red planet.</p>
+                <p class="footer-copyright">&copy; 2026 Walid Abu Al-Afia</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
