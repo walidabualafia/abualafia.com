@@ -1,28 +1,39 @@
 # abualafia.com
 
-A personal portfolio website featuring an interactive terminal interface with retro-inspired theming options.
+A personal portfolio website with a Martian-inspired design, featuring modern UI sections and an interactive terminal experience.
 
-[![Live Site](https://img.shields.io/badge/live-abualafia.com-00ff00?style=flat-square)](https://abualafia.com)
+[![Live Site](https://img.shields.io/badge/live-abualafia.com-c45a3b?style=flat-square)](https://abualafia.com)
 
 ## Overview
 
-This is a terminal-themed portfolio website for Walid Abu Al-Afia, showcasing professional experience, technical skills, and education. The site features an interactive command-line interface with multiple visual themes and easter eggs.
+This is a Martian-themed portfolio website for Walid Abu Al-Afia, Computational Engineer II at St. Jude Children's Research Hospital and MSCS student at UT Austin. The site features a clean, modern design inspired by urbit.org with earthy/Martian tones, complemented by an interactive terminal accessible via a floating button.
 
 ## Features
 
+### Modern Design
+- **Martian color palette**: Rust reds, terracotta, dusty orange, and sand highlights
+- **Clean card-based layout**: Organized sections for easy navigation
+- **Responsive design**: Optimized for desktop, tablet, and mobile
+- **Smooth animations**: Fade-in effects and hover interactions
+- **Custom Martian favicon**: Stylized "W" on a Mars-inspired circle
+
+### Content Sections
+- **Hero**: Introduction with role and mission statement
+- **About**: Background, stats, and profile image
+- **Experience**: Full career timeline at St. Jude
+- **Research**: IEEE/RSJ IROS 2023 publication
+- **Education**: UT Austin MS, Rhodes College BS, NVIDIA certification
+- **Skills**: Comprehensive technical skills organized by category
+- **Vibe Coding**: AI-assisted development philosophy and daily tool stack
+- **Contact**: Email, GitHub, LinkedIn links with CV download
+
 ### Interactive Terminal
+Access the terminal by clicking the terminal icon (bottom-right corner):
 - **Command-line interface** with autocomplete (Tab key)
 - **Command history** navigation (↑/↓ arrow keys)
-- **Quick-access buttons** for common commands
-- **Responsive design** optimized for desktop and mobile
+- **Mars-themed** prompts and easter eggs
 
-### Visual Themes
-- **Default Mode**: Modern dark terminal aesthetic
-- **Windows XP Mode** (`xp`): Nostalgic Windows XP "Bliss" background
-- **Retro Mode** (`retro`): Classic green-on-black terminal with scanline effects
-- **Funky Mode** (`funky`): Colorful gradient animations and rainbow effects
-
-### Available Commands
+### Available Terminal Commands
 
 | Command | Description |
 |---------|-------------|
@@ -32,37 +43,41 @@ This is a terminal-themed portfolio website for Walid Abu Al-Afia, showcasing pr
 | `skills` | Technical skills and expertise |
 | `education` | Educational background |
 | `projects` | View projects and GitHub profile |
+| `vibe` | Vibe coding philosophy |
 | `contact` | Contact information |
-| `resume` | Resume availability info |
+| `resume` | Download CV |
 | `clear` | Clear the terminal |
-| `xp` / `retro` / `funky` | Toggle visual themes |
 
 ### Hidden Easter Eggs
 Try these commands for fun surprises:
 - `ls`, `pwd`, `whoami`, `uname`
 - `neofetch`, `sudo`, `hack`
-- `matrix`, `coffee`
-- **Konami Code**: `↑↑↓↓←→←→BA` 🎮
+- `matrix`, `coffee`, `mars`
+- **Konami Code**: `↑↑↓↓←→←→BA`
 
 ## Tech Stack
 
 - **HTML5** - Semantic markup with SEO optimization
 - **CSS3** - Custom properties, animations, responsive design
 - **Vanilla JavaScript** - No frameworks, pure DOM manipulation
+- **Google Fonts** - Inter + Space Mono typography
 
 ## Project Structure
 
 ```
 abualafia.com/
-├── index.html          # Main HTML structure
-├── style.css           # Styles and theme definitions
-├── script.js           # Terminal logic and commands
-├── CNAME              # Custom domain configuration
-├── robots.txt         # SEO crawler directives
-├── sitemap.xml        # Site structure for search engines
-└── legacy/            # Previous website versions
-    ├── v1/            # Original portfolio design
-    └── v2/            # Bootstrap-based portfolio
+├── index.html                    # Main HTML structure
+├── style.css                     # Martian theme styles
+├── script.js                     # Terminal logic and interactions
+├── favicon.svg                   # Martian "W" favicon
+├── profile.png                   # Profile photo
+├── abualafia-curriculum-vitae.pdf # Downloadable CV
+├── CNAME                         # Custom domain configuration
+├── robots.txt                    # SEO crawler directives
+├── sitemap.xml                   # Site structure for search engines
+└── legacy/                       # Previous website versions
+    ├── v1/                       # Original portfolio design
+    └── v2/                       # Bootstrap-based portfolio
 ```
 
 ## Local Development
@@ -73,18 +88,23 @@ git clone https://github.com/walidabualafia/abualafia.com.git
 cd abualafia.com
 ```
 
-2. Open `index.html` in your browser:
+2. Start a local server:
 ```bash
-open index.html  # macOS
-xdg-open index.html  # Linux
-start index.html  # Windows
+python3 -m http.server 8080
+# Visit http://localhost:8080
 ```
 
-Or use a local server:
-```bash
-python -m http.server 8000
-# Visit http://localhost:8000
-```
+## Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Background Primary | `#0f0e0c` | Main background |
+| Background Secondary | `#1a1816` | Section backgrounds |
+| Accent Primary (Rust) | `#c45a3b` | Buttons, borders, highlights |
+| Accent Secondary (Terracotta) | `#d4764e` | Hover states |
+| Accent Tertiary (Dusty Orange) | `#e8a87c` | Stats, labels |
+| Text Primary | `#f5f0e8` | Headings, body text |
+| Text Secondary | `#a8a095` | Descriptions |
 
 ## SEO Features
 
@@ -112,8 +132,8 @@ To deploy your own version:
 
 ## License
 
-© 2025 Walid Abu Al-Afia. All rights reserved.
+© 2026 Walid Abu Al-Afia. All rights reserved.
 
 ---
 
-*Built with ❤️ and ☕ | HPC Engineer | MSCS Student*
+*Designed & built with care from the red planet.*
