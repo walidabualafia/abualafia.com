@@ -49,7 +49,7 @@ m.s. computer science @ university of texas at austin (expected dec 2028)
 
 from amman, jordan | based in memphis, tn
 b.s. computer science - rhodes college (2023) - magna cum laude
-nvidia-certified associate: ai infrastructure and operations (2024)
+nvidia-certified associate: ai infrastructure and operations (2025)
 
 i architect hpc systems, mlops pipelines, and ai infrastructure that
 empower researchers to push the boundaries of pediatric cancer research.
@@ -129,7 +129,7 @@ rhodes college | 2019 - 2023
   • minor: religious studies
 
 <span class="info-text">certifications</span>
-  • nvidia-certified associate: ai infrastructure and operations (2024)`
+  • nvidia-certified associate: ai infrastructure and operations (2025)`
     },
 
     projects: {
