@@ -1,0 +1,118 @@
+/* ===================================
+   Boot Sequence Animation
+   =================================== */
+
+.boot-screen {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 24px;
+    overflow-y: auto;
+}
+
+.boot-screen.hidden {
+    animation: bootFadeOut 0.6s ease forwards;
+}
+
+@keyframes bootFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; pointer-events: none; }
+}
+
+.boot-container {
+    width: 100%;
+    max-width: 720px;
+    font-family: var(--font-mono);
+    position: relative;
+}
+
+.boot-output {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #a0a0a0;
+}
+
+.boot-line {
+    opacity: 0;
+    animation: bootLineIn 0.1s ease forwards;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+@keyframes bootLineIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.boot-line .boot-tag {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.boot-line .boot-ok {
+    color: var(--green);
+}
+
+.boot-line .boot-val {
+    color: var(--text-primary);
+}
+
+.boot-line .boot-mod {
+    color: var(--blue);
+}
+
+.boot-line .boot-warn {
+    color: var(--orange);
+}
+
+.boot-line.boot-welcome {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.boot-line.boot-hint {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.boot-progress {
+    display: inline-block;
+    color: var(--green);
+}
+
+.boot-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: var(--green);
+    animation: cursorBlink 0.8s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.boot-skip {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    animation: bootSkipPulse 2s ease-in-out infinite;
+}
+
+@keyframes bootSkipPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}

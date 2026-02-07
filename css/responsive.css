@@ -1,0 +1,241 @@
+/* ===================================
+   Responsive Breakpoints
+   =================================== */
+
+/* Tablet: Collapsed sidebar */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: var(--sidebar-w);
+    }
+    .sidebar.expanded {
+        width: var(--sidebar-w-expanded);
+    }
+    .sidebar-label {
+        opacity: 0;
+    }
+    .sidebar.expanded .sidebar-label {
+        opacity: 1;
+    }
+
+    .main-content {
+        left: var(--sidebar-w);
+    }
+    .sidebar.expanded ~ .main-content {
+        left: var(--sidebar-w-expanded);
+    }
+
+    .panel-wide {
+        grid-column: 1 / -1;
+    }
+
+    .identity-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+    .identity-meta {
+        justify-content: center;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .timeline-labels {
+        padding-left: 80px;
+    }
+    .timeline-row-label {
+        width: 80px;
+        font-size: 10px;
+    }
+    .timeline-bar {
+        left: 80px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--mobile-nav-h);
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        z-index: 100;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 4px;
+    }
+
+    .mobile-nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        font-size: 10px;
+        color: var(--text-muted);
+        text-decoration: none;
+        padding: 6px 8px;
+        border-radius: 4px;
+        transition: var(--t-fast);
+    }
+    .mobile-nav-link.active {
+        color: var(--green);
+    }
+    .mobile-nav-link:hover {
+        color: var(--text-primary);
+    }
+
+    .mobile-more-menu {
+        position: fixed;
+        bottom: var(--mobile-nav-h);
+        right: 8px;
+        background: var(--bg-panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 8px 0;
+        z-index: 101;
+        box-shadow: var(--shadow-modal);
+    }
+    .mobile-more-menu.visible {
+        display: block;
+    }
+
+    .mobile-more-link {
+        display: block;
+        padding: 10px 20px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: var(--t-fast);
+    }
+    .mobile-more-link:hover {
+        background: var(--bg-panel-hover);
+        color: var(--text-primary);
+    }
+
+    .main-content {
+        left: 0;
+        bottom: var(--mobile-nav-h);
+        padding: 16px;
+    }
+
+    .topbar-time-range {
+        display: none;
+    }
+
+    .topbar-logo {
+        font-size: 12px;
+    }
+
+    .topbar-breadcrumb {
+        display: none;
+    }
+
+    .panel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-wide,
+    .panel-full,
+    .panel-medium,
+    .panel-small,
+    .panel-tall,
+    .panel-stat {
+        grid-column: 1;
+    }
+
+    .stat-value {
+        font-size: 28px;
+    }
+
+    .identity-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+    .identity-meta {
+        justify-content: center;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .squeue-header,
+    .squeue-row {
+        font-size: 11px;
+    }
+    .sq-time { width: 120px; }
+    .sq-nodes { display: none; }
+    .sq-partition { display: none; }
+
+    .timeline-labels {
+        padding-left: 60px;
+        font-size: 10px;
+    }
+    .timeline-row-label {
+        width: 60px;
+        font-size: 9px;
+    }
+    .timeline-bar {
+        left: 60px;
+    }
+
+    .nvidia-smi-output {
+        font-size: 9px;
+    }
+
+    .network-interfaces {
+        gap: 8px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artifact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .syslog-entry {
+        flex-wrap: wrap;
+    }
+    .syslog-time {
+        width: 70px;
+        font-size: 11px;
+    }
+
+    .terminal-modal {
+        max-height: 90vh;
+    }
+
+    .boot-output {
+        font-size: 11px;
+    }
+}
+
+/* Very small */
+@media (max-width: 400px) {
+    .topbar {
+        padding: 0 8px;
+    }
+    .main-content {
+        padding: 12px;
+    }
+    .panel-body {
+        padding: 12px;
+    }
+    .uptime-counter {
+        gap: 12px;
+    }
+    .uptime-val {
+        font-size: 22px;
+    }
+}

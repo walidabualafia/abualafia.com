@@ -1,0 +1,135 @@
+/* ===================================
+   HPC Dashboard - Theme & Foundation
+   Grafana-inspired dark monitoring UI
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Core palette */
+    --bg-primary: #0b0c0e;
+    --bg-secondary: #111217;
+    --bg-panel: #181b1f;
+    --bg-panel-hover: #1e2127;
+    --bg-input: #0e1012;
+
+    /* Borders */
+    --border: #2c3235;
+    --border-hover: #3d4145;
+    --border-active: #00d4aa;
+
+    /* Accent colors */
+    --green: #00d4aa;
+    --green-dim: rgba(0, 212, 170, 0.15);
+    --green-glow: rgba(0, 212, 170, 0.25);
+    --blue: #3274d9;
+    --blue-dim: rgba(50, 116, 217, 0.15);
+    --orange: #ff9830;
+    --orange-dim: rgba(255, 152, 48, 0.15);
+    --red: #f2495c;
+    --red-dim: rgba(242, 73, 92, 0.15);
+    --yellow: #fade2a;
+    --purple: #8a6bc1;
+
+    /* Text */
+    --text-primary: #d8d9da;
+    --text-secondary: #8e8e8e;
+    --text-muted: #5a5e66;
+    --text-bright: #ffffff;
+
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+    /* Sizing */
+    --topbar-h: 56px;
+    --sidebar-w: 56px;
+    --sidebar-w-expanded: 200px;
+    --mobile-nav-h: 60px;
+
+    /* Transitions */
+    --t-fast: 0.15s ease;
+    --t-base: 0.25s ease;
+    --t-slow: 0.4s ease;
+
+    /* Shadows */
+    --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-modal: 0 16px 64px rgba(0, 0, 0, 0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    height: 100vh;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+    transition: color var(--t-fast);
+}
+
+a:hover {
+    color: var(--text-bright);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+}
+
+pre, code {
+    font-family: var(--font-mono);
+}
+
+::selection {
+    background: var(--green-dim);
+    color: var(--green);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-hover);
+}
+
+/* Utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /legacy/
 
 Sitemap: https://abualafia.com/sitemap.xml
