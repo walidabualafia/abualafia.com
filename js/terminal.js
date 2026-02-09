@@ -129,7 +129,7 @@ const Terminal = (() => {
             'HOME_URL=\"https://www.ubuntu.com/\"',
             'SUPPORT_URL=\"https://help.ubuntu.com/\"',
             'BUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/issue', 'Ubuntu 24.04.1 LTS \\n \\l');
         fsFile('/etc/hostname', 'walid-cluster');
@@ -141,14 +141,14 @@ const Terminal = (() => {
             '::1\\tlocalhost ip6-localhost ip6-loopback',
             'ff02::1\\tip6-allnodes',
             'ff02::2\\tip6-allrouters',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/resolv.conf', [
             '# This file is managed by systemd-resolved',
             'nameserver 1.1.1.1',
             'nameserver 8.8.8.8',
             'search cluster.local',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/passwd', [
             'root:x:0:0:root:/root:/bin/bash',
@@ -157,7 +157,7 @@ const Terminal = (() => {
             'grafana:x:472:472:Grafana:/usr/share/grafana:/usr/sbin/nologin',
             'prometheus:x:65534:65534:Prometheus:/var/lib/prometheus:/usr/sbin/nologin',
             'visitor:x:1000:1000:Visitor:/home/visitor:/bin/bash',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/group', [
             'root:x:0:',
@@ -166,7 +166,7 @@ const Terminal = (() => {
             'grafana:x:472:',
             'prometheus:x:65534:',
             'users:x:100:visitor',
-        ].join('\\n'));
+        ].join('\n'));
 
         // Use the existing MOTD text (keeps consistency)
         fsFile('/etc/motd', commands['cat /etc/motd']());
@@ -175,7 +175,7 @@ const Terminal = (() => {
             '# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))',
             '# This is a simulated environment inside a portfolio terminal.',
             'export PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/ssh/sshd_config', [
             '# OpenSSH server configuration file',
@@ -186,7 +186,7 @@ const Terminal = (() => {
             'UsePAM yes',
             'X11Forwarding no',
             'AcceptEnv LANG LC_*',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/slurm/slurm.conf', [
             '# slurm.conf - simulated configuration (portfolio)',
@@ -200,7 +200,7 @@ const Terminal = (() => {
             'SelectType=select/cons_tres',
             'GresTypes=gpu',
             'PartitionName=main-hpc Nodes=ALL Default=YES MaxTime=INFINITE State=UP',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/prometheus/prometheus.yml', [
             '# prometheus.yml - simulated',
@@ -213,7 +213,7 @@ const Terminal = (() => {
             '  - job_name: \"slurm_exporter\"',
             '    static_configs:',
             '      - targets: [\"slurmctld01:8080\"]',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/etc/grafana/grafana.ini', [
             '; grafana.ini - simulated',
@@ -223,7 +223,7 @@ const Terminal = (() => {
             '[security]',
             'disable_gravatar = true',
             'cookie_secure = true',
-        ].join('\\n'));
+        ].join('\n'));
 
         // Logs (short but plausible)
         fsFile('/var/log/boot.log', [
@@ -236,56 +236,56 @@ const Terminal = (() => {
             'systemd[1]: Reached target Multi-User System.',
             '',
             'motd: \"Curious sysadmins: check /etc/.cluster_vault\"',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/syslog', [
             'Feb 07 12:00:01 walid-cluster systemd[1]: Started Daily apt download activities.',
             'Feb 07 12:02:11 walid-cluster prometheus[812]: TSDB started',
             'Feb 07 12:03:02 walid-cluster grafana[833]: HTTP Server Listen',
             'Feb 07 12:06:54 walid-cluster sshd[1022]: Server listening on 0.0.0.0 port 22.',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/auth.log', [
             'Feb 07 12:06:54 walid-cluster sshd[1022]: Server listening on 0.0.0.0 port 22.',
             'Feb 07 12:07:10 walid-cluster sshd[1099]: Invalid user admin from 203.0.113.44 port 52311',
             'Feb 07 12:07:12 walid-cluster sshd[1099]: pam_unix(sshd:auth): authentication failure',
             'Feb 07 12:07:20 walid-cluster sshd[1099]: Failed password for invalid user admin from 203.0.113.44 port 52311 ssh2',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/kern.log', [
             'Feb 07 12:00:00 walid-cluster kernel: audit: initializing netlink subsys',
             'Feb 07 12:00:00 walid-cluster kernel: sched: RT throttling activated',
             'Feb 07 12:00:01 walid-cluster kernel: Initialized GPU subsystem (simulated)',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/slurm/slurmctld.log', [
             'Feb 07 12:00:03 slurmctld[901]: debug: slurmctld started',
             'Feb 07 12:00:04 slurmctld[901]: sched: Backfill scheduler started',
             'Feb 07 12:01:22 slurmctld[901]: job_submit: JobId=100006 Name=computation_engineer State=RUNNING',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/slurm/slurmd.log', [
             'Feb 07 12:00:10 slurmd[955]: slurmd started',
             'Feb 07 12:01:25 slurmd[955]: Launching job 100006 batch script',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/grafana/grafana.log', [
             't=2026-02-07T12:03:02Z lvl=info msg=\"Starting Grafana\"',
             't=2026-02-07T12:03:03Z lvl=info msg=\"HTTP Server Listen\" address=0.0.0.0:3000',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/prometheus/prometheus.log', [
             'ts=2026-02-07T12:02:11Z level=info msg=\"Starting Prometheus\"',
             'ts=2026-02-07T12:02:12Z level=info msg=\"Server is ready to receive web requests.\"',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/ondemand/nginx_access.log', [
             '127.0.0.1 - - [07/Feb/2026:12:10:01 +0000] \"GET /pun/sys/dashboard HTTP/1.1\" 200 1024 \"-\" \"Mozilla/5.0\"',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/log/ondemand/nginx_error.log', [
             '2026/02/07 12:10:01 [notice] 1#1: using the \"epoll\" event method',
-        ].join('\\n'));
+        ].join('\n'));
 
         // Home files (point to existing terminal content)
         fsFile('/home/visitor/README', [
@@ -297,20 +297,20 @@ const Terminal = (() => {
             '  ls',
             '  ls -a /etc',
             '  cat /var/log/boot.log',
-        ].join('\\n'));
+        ].join('\n'));
 
         // Treasure hunt (dotfiles + small trail of hints)
         fsFile('/etc/.cluster_vault', [
             '# vault: do not commit real secrets here',
             '# (this is a fake file for a portfolio easter egg)',
             '',
-            'If you are reading this, you\\'re the kind of person I love working with.',
+            'If you are reading this, you\'re the kind of person I love working with.',
             '',
             'Hint 1: Logs rarely lie.',
             'Hint 2: Try: cat /var/log/boot.log',
             '',
             'Next: /var/lib/.cache/.sjhpc/README',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/lib/.cache/.sjhpc/README', [
             'stjude-hpc: scratch notes (simulated)',
@@ -318,16 +318,16 @@ const Terminal = (() => {
             'Rule 0: no secrets in repos.',
             'Rule 1: observability beats guesswork.',
             '',
-            'If you\\'re here, you\\'re close.',
+            'If you\'re here, you\'re close.',
             'Try: ls -a /var/lib/.cache/.sjhpc',
-        ].join('\\n'));
+        ].join('\n'));
 
         fsFile('/var/lib/.cache/.sjhpc/.flag', [
             'FLAG{curious_sysadmin_detected}',
             '',
             'Nice. You found the treasure hunt.',
             'If you enjoyed this, open the terminal and type: about',
-        ].join('\\n'));
+        ].join('\n'));
     }
 
     const commands = {
@@ -611,7 +611,90 @@ dev         up      10      idle     *       *
             }
 
             setCwd(target);
-            return ''; // no output on successful cd\n+        },\n+\n+        ls: (args) => {\n+            const parsed = parseArgs(args);\n+            const showAll = parsed.flags.has('-a') || parsed.flags.has('-la') || parsed.flags.has('-al');\n+            const targetArg = parsed.paths[0] || '';\n+            const target = resolvePath(targetArg);\n+\n+            if (!hasPermission(target)) {\n+                return `<span class=\"term-error\">ls: cannot open directory '${escapeHtml(targetArg || target)}': Permission denied</span>`;\n+            }\n+\n+            if (!fsExists(target)) {\n+                return `<span class=\"term-error\">ls: cannot access '${escapeHtml(targetArg || target)}': No such file or directory</span>`;\n+            }\n+\n+            const node = fsGet(target);\n+            if (node.type === 'file') {\n+                return escapeHtml(target.split('/').pop() || target);\n+            }\n+\n+            const items = node.children\n+                .filter(name => showAll || !name.startsWith('.'))\n+                .slice()\n+                .sort((a, b) => a.localeCompare(b));\n+\n+            // Add . and .. for -a\n+            if (showAll) {\n+                items.unshift('..');\n+                items.unshift('.');\n+            }\n+\n+            return items.map(name => {\n+                const full = normalizePath((target === '/' ? '' : target) + '/' + name);\n+                const n = fsGet(full);\n+                if (name === '.' || name === '..') {\n+                    return `<span class=\"term-muted\">${escapeHtml(name)}</span>`;\n+                }\n+                if (n?.type === 'dir') {\n+                    return `<span class=\"term-info\">${escapeHtml(name)}/</span>`;\n+                }\n+                if (name.endsWith('.log') || name === 'syslog' || name === 'auth.log' || name === 'boot.log') {\n+                    return `<span class=\"term-muted\">${escapeHtml(name)}</span>`;\n+                }\n+                if (name.endsWith('.conf') || name.endsWith('.ini') || name.endsWith('.yml') || name.endsWith('.yaml')) {\n+                    return `<span class=\"term-bold\">${escapeHtml(name)}</span>`;\n+                }\n+                return escapeHtml(name);\n+            }).join('  ');\n+        },\n+\n+        cat: (args) => {\n+            const targetArg = (args || '').trim();\n+            if (!targetArg) {\n+                return `<span class=\"term-error\">cat: missing file operand</span>`;\n+            }\n+\n+            const target = resolvePath(targetArg);\n+\n+            if (!hasPermission(target)) {\n+                return `<span class=\"term-error\">cat: ${escapeHtml(targetArg)}: Permission denied</span>`;\n+            }\n+\n+            // Preserve old \"portfolio files\" behavior\n+            if (target === '/home/visitor/about.txt') return commands.about();\n+            if (target === '/home/visitor/experience.txt') return commands.experience();\n+            if (target === '/home/visitor/skills.txt') return commands.skills();\n+            if (target === '/home/visitor/education.log') return commands.education();\n+            if (target === '/home/visitor/contact.vcf') return commands.contact();\n+            if (target === '/home/visitor/resume.pdf') {\n+                return `<span class=\"term-muted\">Binary file (PDF). Try:</span> <a href=\"abualafia-curriculum-vitae.pdf\" download>download CV</a>`;\n+            }\n+\n+            if (!fsExists(target)) {\n+                return `<span class=\"term-error\">cat: ${escapeHtml(targetArg)}: No such file or directory</span>`;\n+            }\n+\n+            const node = fsGet(target);\n+            if (node.type !== 'file') {\n+                return `<span class=\"term-error\">cat: ${escapeHtml(targetArg)}: Is a directory</span>`;\n+            }\n+\n+            return node.content;\n+        },\n     };
+            return '';
+        },
+
+        ls: (args) => {
+            const parsed = parseArgs(args);
+            const showAll = parsed.flags.has('-a') || parsed.flags.has('-la') || parsed.flags.has('-al');
+            const targetArg = parsed.paths[0] || '';
+            const target = resolvePath(targetArg);
+
+            if (!hasPermission(target)) {
+                return `<span class="term-error">ls: cannot open directory '${escapeHtml(targetArg || target)}': Permission denied</span>`;
+            }
+
+            if (!fsExists(target)) {
+                return `<span class="term-error">ls: cannot access '${escapeHtml(targetArg || target)}': No such file or directory</span>`;
+            }
+
+            const node = fsGet(target);
+            if (node.type === 'file') {
+                return escapeHtml(target.split('/').pop() || target);
+            }
+
+            const items = node.children
+                .filter(name => showAll || !name.startsWith('.'))
+                .slice()
+                .sort((a, b) => a.localeCompare(b));
+
+            if (showAll) {
+                items.unshift('..');
+                items.unshift('.');
+            }
+
+            return items.map(name => {
+                const full = normalizePath((target === '/' ? '' : target) + '/' + name);
+                const n = fsGet(full);
+                if (name === '.' || name === '..') {
+                    return `<span class="term-muted">${escapeHtml(name)}</span>`;
+                }
+                if (n && n.type === 'dir') {
+                    return `<span class="term-info">${escapeHtml(name)}/</span>`;
+                }
+                if (name.endsWith('.log') || name === 'syslog' || name === 'auth.log' || name === 'boot.log') {
+                    return `<span class="term-muted">${escapeHtml(name)}</span>`;
+                }
+                if (name.endsWith('.conf') || name.endsWith('.ini') || name.endsWith('.yml') || name.endsWith('.yaml')) {
+                    return `<span class="term-bold">${escapeHtml(name)}</span>`;
+                }
+                return escapeHtml(name);
+            }).join('  ');
+        },
+
+        cat: (args) => {
+            const targetArg = (args || '').trim();
+            if (!targetArg) {
+                return `<span class="term-error">cat: missing file operand</span>`;
+            }
+
+            const target = resolvePath(targetArg);
+
+            if (!hasPermission(target)) {
+                return `<span class="term-error">cat: ${escapeHtml(targetArg)}: Permission denied</span>`;
+            }
+
+            // Preserve old portfolio files behavior
+            if (target === '/home/visitor/about.txt') return commands.about();
+            if (target === '/home/visitor/experience.txt') return commands.experience();
+            if (target === '/home/visitor/skills.txt') return commands.skills();
+            if (target === '/home/visitor/education.log') return commands.education();
+            if (target === '/home/visitor/contact.vcf') return commands.contact();
+            if (target === '/home/visitor/resume.pdf') {
+                return `<span class="term-muted">Binary file (PDF). Try:</span> <a href="abualafia-curriculum-vitae.pdf" download>download CV</a>`;
+            }
+
+            if (!fsExists(target)) {
+                return `<span class="term-error">cat: ${escapeHtml(targetArg)}: No such file or directory</span>`;
+            }
+
+            const node = fsGet(target);
+            if (node.type !== 'file') {
+                return `<span class="term-error">cat: ${escapeHtml(targetArg)}: Is a directory</span>`;
+            }
+
+            return node.content;
+        },
     };
 
     // Easter egg commands

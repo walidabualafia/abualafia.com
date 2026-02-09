@@ -138,7 +138,7 @@ Welcome to the inner circle.
     function initConsoleEgg() {
         const styles = 'font-size: 16px; font-weight: bold; padding: 10px;';
         console.log('%c🖥️ Welcome to Walid\'s HPC Dashboard!', `${styles} color: #00d4aa;`);
-        console.log('%cComputional Engineer @ St. Jude | M.S. CS @ UT Austin', 'font-size: 12px; color: #8e8e8e;');
+        console.log('%cComputational Engineer @ St. Jude | M.S. CS @ UT Austin', 'font-size: 12px; color: #8e8e8e;');
         console.log('%cTry the terminal (press "t") for more secrets...', 'font-size: 12px; color: #3274d9;');
         console.log('%cOr enter the Konami code: ↑↑↓↓←→←→BA', 'font-size: 11px; color: #5a5e66;');
     }
